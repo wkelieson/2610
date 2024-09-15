@@ -1,0 +1,75 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+}
+
+#headerWrapper {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  gap: 10px;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: $boldWeight;
+  }
+}
+#navWrapper {
+  background-color: $primaryColor;
+}
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+      flex: 1;
+    }
+  }
+  li.active {
+    background-color: white;
+  }
+  a {
+    display: block;
+    padding: 1rem;
+    color: $offBlack;
+    text-align: center;
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}
+
+// footer
+#footerWrapper {
+    background-color: $secondaryColor;
+}
+footer {
+    padding: 3rem;
+    p {
+        margin: 0;
+        font-weight: $normalWeight;
+        color: white;
+    }
+}
